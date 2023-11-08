@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: qa-allure-service-ingress
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+    - host: 
+      http:
+        paths:
+          - backend:
+              serviceName: qa-allure-service
+              servicePort: 9090
+            path: 
+   
